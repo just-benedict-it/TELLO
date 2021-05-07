@@ -8,5 +8,8 @@ tello.takeoff()
 tello.move_left(100)
 tello.rotate_counter_clockwise(90)
 tello.move_forward(100)
+tello.move_backward(50)
+tello.rotate_clockwise(45)
+tello.move_right(30)
 
 tello.land()
