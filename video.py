@@ -12,13 +12,13 @@ frame_read = tello.get_frame_read()
 
 def videoRecorder():
     height, width, _ = frame_read.frame.shape
-    video = cv2.VideoWriter('video.avi', cv2.VideoWriter_fourcc(*'XVID'), (width, height))
+    vid_writer = cv2.VideoWriter('video.avi', cv2.VideoWriter_fourcc(*'XVID'), (width, height))
 
     while keepRecording:
-        video.write(frame_read.frame)
+        vid_writer.write(frame_read.frame)
         time.sleep(1/30)
 
-    video.release()
+    vid_writer.release()
 
 #Thread 는 두 개 이상의 행동을 동시에 하기 위한 함수이다
 #여기서는 tello를 움직이는 것과 recording을 동시에 수행하기 위해 사용했다
@@ -26,7 +26,7 @@ recorder = Thread(target =  videoRecorder)
 recorder.start()
 
 tello.takeoff()
-tello.move_up(180)
+tello.move_up(30)
 tello.rotate_counter_clockwise(360)
 tello.land()
 

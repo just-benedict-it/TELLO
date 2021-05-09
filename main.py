@@ -1,22 +1,22 @@
 from djitellopy import Tello
 from time import sleep
 
-tello = Tello()
+me = Tello()
 
-tello.connect()
-tello.takeoff()
+me.connect()
+me.takeoff()
 
-# tello.move_left(30)
+# me.move_left(30)
 # sleep(1)
-# tello.move_right(50)
+# me.move_right(50)
 # sleep(1)
-# tello.rotate_counter_clockwise(90)
+# me.rotate_counter_clockwise(90)
 # sleep(1)
-# tello.send_rc_control(-10,0,0,0)
+# me.send_rc_control(-10,0,0,0)
 # sleep(2)
 #
-# tello.send_rc_control(0,20,0,0)
+# me.send_rc_control(0,20,0,0)
 # sleep(2)
-# tello.send_rc_control(0,-20,0,0)
+# me.send_rc_control(0,-20,0,0)
 sleep(3)
-tello.land()
+me.land()
