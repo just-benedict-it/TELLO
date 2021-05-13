@@ -25,9 +25,9 @@ def getKeyboardInput():
 
     if kp.getKey("q") : me.land()
     if kp.getKey("e") : me.takeoff()
+
     return [lr, fb, ud, yv]
 
-me.takeoff()
 
 while True:
     vals = getKeyboardInput()
